@@ -4,28 +4,31 @@ public class EmployeeInformation extends BankAccountDetails implements EmployeeI
 	int empno;
 	double sal;
 	String address;
-	//Interface methods
+	/**
+	 * Interface methods
+	 */
 	public void employeeInfo(int empno, double sal) {
 		this.empno=empno;
 		this.sal=sal;
 	}
 	public void employeeAddress(String add) {
 		this.address=add;
-		// TODO Auto-generated method stu
 	}
 	public void employeeDetails() {
 		System.out.println("Employee No. :" +empno);
 		System.out.println("Employee Salary : "+sal);
 		System.out.println("Employee Address : "+address);
 		System.out.println("Employee Country :"+country);
-		// TODO Auto-generated method stub
+		
 	}
-//Abstract methods
+   /**
+    * Abstract methods
+    */
 	@Override
 	public void accountDetails() {
 		System.out.println("Account No :");
 		System.out.println("Area : Banglore");
-		// TODO Auto-generated method stub
+		
 	}
 	public void show()
 	{
@@ -37,16 +40,24 @@ public class EmployeeInformation extends BankAccountDetails implements EmployeeI
 		try
 		{
 			EmployeeInformation emp=new EmployeeInformation();
-			//3 Interface methods called
+			/**
+			 * 3 Interface methods called
+			 */
 			emp.employeeInfo(200, 30000);
 			emp.employeeAddress("Banglore");
 			emp.employeeDetails();
-			//abstract methods
+			/**
+			 * abstract methods
+			 */
 			emp.accountDetails();
 			emp.bankDetails();
-			//Local methods
+			/**
+			 * Local methods
+			 */
 			emp.show();
-			// HAS-A
+			/**
+			 * HAS-A
+			 */
 			BankRBI  bank=new BankRBI();//Static Block and Default Constructor
 			BankRBI  bank1=new BankRBI(5.2,5.2);//Pareterized cons
 			BankRBI.getBankDetails();
